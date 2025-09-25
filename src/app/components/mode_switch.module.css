@@ -1,0 +1,13 @@
+.switch {
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+	border-radius: 50px;
+	background-color: lightgrey;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.switch:hover {
+	background-color: grey;
+}

@@ -1,25 +1,50 @@
+import Image from "next/image";
+import styles from "./todo.module.css";
+
 function Deadline() {
-	return <div>2025-12-25 12:00</div>;
+	return (
+		<div className={styles.deadline}>
+			2025-12-25
+			<br />
+			12:00
+		</div>
+	);
 }
 
 function Description() {
-	return <div>Description</div>;
+	return <div className={styles.description}>Description</div>;
 }
 
 function ModifyButton() {
-	return <div>M</div>;
+	return (
+		<Image
+			src="/update_black.svg"
+			className={styles.button}
+			width={45}
+			height={45}
+			alt="modify"
+		></Image>
+	);
 }
 
 function DeleteButton() {
-	return <div>D</div>;
+	return (
+		<Image
+			src="/delete_black.svg"
+			className={styles.button}
+			width={45}
+			height={45}
+			alt="modify"  
+		></Image>
+	);
 }
 
 export default function Todo() {
 	return (
-		<article>
+		<article className={styles.container}>
 			<Deadline />
 			<Description />
-			<div>
+			<div className={styles.button_container}>
 				<ModifyButton />
 				<DeleteButton />
 			</div>

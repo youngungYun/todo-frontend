@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Switch from "./components/mode_switch";
 
 const pretendard = localFont({
 	src: "./font/PretendardVariable.woff2",
@@ -16,6 +17,7 @@ export default function RootLayout({
 		<html lang="ko" className={pretendard.className}>
 			<body>
 				<div className="wrapper">{children}</div>
+				<Switch />
 			</body>
 		</html>
 	);
