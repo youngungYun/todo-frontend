@@ -1,33 +1,12 @@
 import Image from "next/image";
-import Todo from "./components/todo";
 import styles from "./page.module.css";
+import TodoContainer from "./_components/todo_container";
+import CreateButton from "./_components/create_button";
 
-function CreateButton() {
-	return (
-		<Image
-			src="/add_black.svg"
-			className={styles.create_button}
-			width={50}
-			height={50}
-			alt="create"
-		></Image>
-	);
-}
+
 
 function Title() {
-	return <div className={styles.title}>✅Todo App</div>;
-}
-
-function ScrollButton({ src }: { src: string }) {
-	return (
-		<Image
-			src={src}
-			className={styles.scroll_button}
-			width={50}
-			height={50}
-			alt="create"
-		></Image>
-	);
+	return <header className={styles.title}>Todo App</header>;
 }
 
 export default function Page() {
@@ -36,16 +15,7 @@ export default function Page() {
 			<div className={styles.container}>
 				<Title />
 				<CreateButton />
-				<main className={styles.main}>
-					<Todo />
-					<Todo />
-					<Todo />
-					<Todo />
-				</main>
-			</div>
-			<div className={styles.scroll_div}>
-				<ScrollButton src={"/arrow_back_black.svg"} />
-				<ScrollButton src={"/arrow_forward_black.svg"} />
+				<TodoContainer />
 			</div>
 		</>
 	);

@@ -2,7 +2,6 @@ html body {
 	margin: 0;
 	padding: 0;
 }
-
 .wrapper {
 	width: 100vw;
 	height: 100vh;
@@ -11,14 +10,9 @@ html body {
 	justify-content: center;
 	align-items: center;
 	gap: 40px;
+	background-color: #f7fafc;
 }
 
-.light {
-	background-color: white;
-	color: black;
-}
-
-.dark {
-	background-color: black;
-	color: white;
+html.dark .wrapper {
+	background-color: #0f1419;
 }

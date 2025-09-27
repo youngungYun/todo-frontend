@@ -1,0 +1,23 @@
+.switch {
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+	border-radius: 50px;
+	background-color: #919191;
+	padding: 10px;
+	cursor: pointer;
+	transition: background-color 0.1s ease-in-out;
+	background-color: #aaaaaa;
+}
+
+.switch:hover {
+	background-color: #cecece;
+}
+
+:global(html.dark) .switch {
+	background-color: #535353;
+}
+
+:global(html.dark) .switch:hover {
+	background-color: #797979;
+}

@@ -3,54 +3,25 @@
 	flex-direction: column;
 	align-items: center;
 	border-radius: 20px;
-	background-color: #03a9f4;
+	background-color: #06b6d4;
 	width: 100%;
 	max-width: 600px;
+	min-height: 765px;
 	box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 5px 10px;
 	gap: 15px;
 	overflow-y: auto;
 }
 
+:global(html.dark) .container {
+	background-color: #0891b2;
+}
+
 .title {
+	padding-top: 10px;
 	font-size: 4.5rem;
+	color: #0f1419;
 }
 
-.create_button {
-	margin-left: 30px;
-	align-self: flex-start;
-	width: 50px;
-	height: 50px;
-	background-color: white;
-	cursor: pointer;
-	border-radius: 25px;
-}
-
-.create_button:hover {
-	background-color: grey;
-}
-
-.main {
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
-	width: 95%;
-	flex-grow: 1;
-	border-radius: 10px;
-}
-
-.scroll_div {
-	display: flex;
-	justify-content: center;
-	gap: 20px;
-}
-
-.scroll_button {
-	border: 2px solid black;
-	border-radius: 35px;
-	background-color: white;
-	cursor: pointer;
-}
-
-.scroll_button:hover {
-	background-color: grey;
+:global(html.dark) .title {
+	color: #f7fafc;
 }

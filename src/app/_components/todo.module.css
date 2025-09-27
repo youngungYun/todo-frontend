@@ -4,13 +4,21 @@
 	align-items: center;
 	width: 100%;
 	height: 130px;
-	background-color: #0276aa;
+	background-color: #0891b2;
 	border-radius: 10px;
-	border: 2px solid #35baf6;
+}
+
+.even {
+	background-color: #147891;
+}
+
+:global(html.dark) .container {
+	background-color: #0e7490;
 }
 
 .deadline {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	margin-left: 20px;
@@ -23,6 +31,11 @@
 	font-weight: bold;
 	text-align: center;
 	line-height: 35px;
+	color: black;
+}
+
+.deadline.passed {
+	color: red;
 }
 
 .description {
@@ -39,6 +52,7 @@
 	white-space: normal;
 	overflow-wrap: anywhere;
 	overflow-y: auto;
+	color: black;
 }
 
 .button_container {
@@ -51,11 +65,29 @@
 }
 
 .button {
-	background-color: white;
 	border-radius: 15px;
+	cursor: pointer;
+	background-color: #ed8936;
 }
 
 .button:hover {
-	background-color: rgba(255, 255, 255, 0.7);
-	cursor: pointer;
+	filter: brightness(0.7);
+	transition: 0.2s ease-in-out;
+}
+
+:global(html.dark) .button {
+	background-color: #d69e2e;
+}
+
+.danger {
+	background-color: #e53e3e;
+}
+
+:global(html.dark) .danger {
+	background-color: #e53e3e;
+}
+
+.danger:hover {
+	filter: brightness(0.8);
+	transition: 0.2s ease-in-out;
 }

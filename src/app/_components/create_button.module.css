@@ -1,0 +1,17 @@
+.create_button {
+	margin-left: 40px;
+	align-self: flex-start;
+	cursor: pointer;
+	border-radius: 30px;
+	background-image: linear-gradient(to right, #48bb78, rgb(50, 170, 100));
+	box-shadow: rgba(100, 100, 111, 0.2) 3px 1px 4px 3px;
+}
+
+.create_button:hover {
+	transition: 0.1s ease-in-out;
+	filter: brightness(0.8);
+}
+
+:global(html.dark) .create_button {
+	background-image: linear-gradient(to right, #38a169, #319259);
+}
