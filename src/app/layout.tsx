@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Switch from "./_components/mode_switch";
 import { ThemeProvider } from "next-themes";
+import { ReactNode } from "react";
 
 export const metadata: Metadata = {
 	title: "Todo App",
@@ -16,14 +17,19 @@ const pretendard = localFont({
 
 export default function RootLayout({
 	children,
+	modal,
 }: Readonly<{
-	children: React.ReactNode;
+	children: ReactNode;
+	modal: ReactNode;
 }>) {
 	return (
 		<html lang="ko" className={pretendard.className} suppressHydrationWarning>
 			<body>
 				<ThemeProvider attribute="class" defaultTheme="system">
-					<div className="wrapper">{children}</div>
+					<div className="wrapper" id="modal-root">
+						{modal}
+						{children}
+					</div>
 					<Switch />
 				</ThemeProvider>
 			</body>

@@ -1,14 +1,17 @@
 "use client";
 
-import { CreateTodo } from "../actions/create_todo_action";
+import Link from "next/link";
 import styles from "./create_button.module.css";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function CreateButton() {
-	const handleClick = async () => {
-		const result = await CreateTodo();
-		alert(result.id);
+	const router = useRouter();
+
+	const handleClick = () => {
+		router.push("/create");
 	};
+
 	return (
 		<Image
 			src="/add_black.svg"

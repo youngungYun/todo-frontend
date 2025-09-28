@@ -19,9 +19,5 @@
 .title {
 	padding-top: 10px;
 	font-size: 4.5rem;
-	color: #0f1419;
-}
-
-:global(html.dark) .title {
-	color: #f7fafc;
+	color: rgb(98, 41, 190);
 }
