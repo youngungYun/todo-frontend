@@ -27,7 +27,7 @@
 	height: 70%;
 	background-color: white;
 	border-radius: 10px;
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 	font-weight: bold;
 	text-align: center;
 	line-height: 35px;
@@ -62,32 +62,4 @@
 	margin-right: 15px;
 	width: 8%;
 	height: 70%;
-}
-
-.button {
-	border-radius: 15px;
-	cursor: pointer;
-	background-color: #ed8936;
-}
-
-.button:hover {
-	filter: brightness(0.7);
-	transition: 0.2s ease-in-out;
-}
-
-:global(html.dark) .button {
-	background-color: #d69e2e;
-}
-
-.danger {
-	background-color: #e53e3e;
-}
-
-:global(html.dark) .danger {
-	background-color: #e53e3e;
-}
-
-.danger:hover {
-	filter: brightness(0.8);
-	transition: 0.2s ease-in-out;
 }

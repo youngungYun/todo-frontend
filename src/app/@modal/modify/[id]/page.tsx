@@ -1,14 +1,15 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import styles from "./page.module.css";
 import { useActionState, useEffect } from "react";
-import { CreateTodo } from "@/app/actions/create_todo_action";
+import { ModifyTodo } from "@/app/actions/modify_todo_action";
 
 export default function Page() {
 	const router = useRouter();
 
-	const [state, formAction, isPending] = useActionState(CreateTodo, null);
+	const { id } = useParams<{ id: string }>();
+	const [state, formAction, isPending] = useActionState(ModifyTodo, null);
 
 	const handleCancel = () => {
 		router.back();
@@ -34,6 +35,7 @@ export default function Page() {
 			<div className={styles.overlay} onClick={handleClickOvelay}></div>
 			<form className={`${styles.flex} ${styles.form}`} action={formAction}>
 				<div className={`${styles.deadline} ${styles.flex}`}>
+					<input id="id" name="id" value={id} hidden readOnly />
 					<label htmlFor="deadline">날짜</label>
 					<input
 						type="datetime-local"
@@ -56,7 +58,7 @@ export default function Page() {
 				</div>
 				<div className={styles.button_container}>
 					<button type="submit" disabled={isPending}>
-						제출
+						수정
 					</button>
 					<button type="button" onClick={handleCancel} disabled={isPending}>
 						취소

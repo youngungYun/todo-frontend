@@ -11,6 +11,9 @@ export default async function TodoContainer() {
 	}
 
 	const todos: TodoType[] = await response.json();
+	todos.sort(
+		(a, b) => new Date(a.deadline).getTime() - new Date(b.deadline).getTime()
+	);
 
 	return (
 		<main className={styles.main}>
