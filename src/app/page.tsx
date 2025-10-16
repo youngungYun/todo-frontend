@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "./page.module.css";
 import TodoContainer from "./_components/todo_container";
 import CreateButton from "./_components/create_button";

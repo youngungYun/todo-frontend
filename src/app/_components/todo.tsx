@@ -1,9 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import styles from "./todo.module.css";
 import { useEffect, useState } from "react";
-import { DeleteTodo } from "../actions/delete_todo_action";
 import ModifyButton from "./modify_button";
 import DeleteButton from "./delete_button";
 

@@ -6,5 +6,5 @@ type TodoType = {
 
 type createRequest = {
 	deadline: string;
-	description: String;
+	description: string;
 };

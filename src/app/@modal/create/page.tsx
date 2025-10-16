@@ -27,7 +27,7 @@ export default function Page() {
 		} else {
 			alert(state.error);
 		}
-	}, [state]);
+	}, [state, router]);
 
 	return (
 		<>

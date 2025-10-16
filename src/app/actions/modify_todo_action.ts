@@ -43,7 +43,7 @@ export async function ModifyTodo(
 			status: true,
 			error: "",
 		};
-	} catch (err) {
+	} catch {
 		return {
 			status: false,
 			error: "Todo 수정에 실패했습니다.",

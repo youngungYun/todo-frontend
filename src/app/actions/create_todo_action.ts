@@ -42,7 +42,7 @@ export async function CreateTodo(
 			status: true,
 			error: "",
 		};
-	} catch (err) {
+	} catch {
 		return {
 			status: false,
 			error: "Todo 등록에 실패했습니다.",
