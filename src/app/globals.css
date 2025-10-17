@@ -15,4 +15,6 @@ html body {
 
 html.dark .wrapper {
 	background-color: #0f1419;
+	transition-property: background-color;
+	transition-duration: 0.5s;
 }
