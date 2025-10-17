@@ -11,10 +11,13 @@ html body {
 	align-items: center;
 	gap: 40px;
 	background-color: #f7fafc;
+
+	transition-property: background-color;
+	transition-duration: 0.3s;
 }
 
 html.dark .wrapper {
 	background-color: #0f1419;
 	transition-property: background-color;
-	transition-duration: 0.5s;
+	transition-duration: 0.3s;
 }
